@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Developer Bùi Uyên — Portfolio</title>
+  <meta name="description" content="Portfolio cá nhân của Developer Bùi Uyên — web developer, frontend & fullstack enthusiast." />
+  <style>
+    :root{ --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#6ee7b7; --accent2:#60a5fa; }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Arial; background:linear-gradient(180deg,#071226 0%,#081021 60%);color:#e6eef8}
+    .container{max-width:1000px;margin:36px auto;padding:28px}
+    header{display:flex;align-items:center;gap:18px}
+    .avatar{width:96px;height:96px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:700;color:#052026}
+    h1{margin:0;font-size:1.6rem}
+    p.lead{margin:4px 0 0;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:24px;margin-top:26px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .chip{background:rgba(255,255,255,0.03);padding:6px 10px;border-radius:999px;font-size:0.9rem;color:var(--muted)}
+    .projects{display:flex;flex-direction:column;gap:12px}
+    .project{padding:12px;border-radius:10px;background:rgba(255,255,255,0.02);display:flex;justify-content:space-between;align-items:center}
+    .project .meta{color:var(--muted);font-size:0.9rem}
+    .contact{display:flex;flex-direction:column;gap:8px}
+    .btn{background:var(--accent);color:#042018;padding:10px 12px;border-radius:10px;border:none;cursor:pointer;text-decoration:none;font-weight:600}
+    footer{margin-top:30px;text-align:center;color:var(--muted);font-size:0.9rem}
+    @media (max-width:880px){.grid{grid-template-columns:1fr}.avatar{width:78px;height:78px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="avatar">BU</div>
+      <div>
+        <h1>Developer Bùi Uyên</h1>
+        <p class="lead">Frontend & Full‑stack developer — Tạo trải nghiệm web mượt mà, thân thiện và hiệu năng cao.</p>
+        <div style="margin-top:10px;display:flex;gap:8px;align-items:center">
+          <a class="btn" href="#contact">Liên hệ</a>
+          <a class="btn" href="#projects" style="background:var(--accent2);color:#042025">Dự án</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <main>
+        <section class="card">
+          <h2>Về tôi</h2>
+          <p class="lead">Xin chào — tôi là Bùi Uyên. Tôi xây dựng các ứng dụng web hiện đại bằng JavaScript, React và Node.js. Tôi chú trọng tới hiệu năng, accessibility và trải nghiệm người dùng.</p>
+          <div style="margin-top:12px">
+            <strong>Kỹ năng chính</strong>
+            <div class="skills">
+              <span class="chip">JavaScript (ES6+)</span>
+              <span class="chip">TypeScript</span>
+              <span class="chip">React</span>
+              <span class="chip">Node.js</span>
+              <span class="chip">HTML & CSS</span>
+              <span class="chip">Next.js</span>
+              <span class="chip">REST / GraphQL</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" class="card" style="margin-top:18px">
+          <h2>Dự án nổi bật</h2>
+          <div class="projects">
+            <div class="project">
+              <div>
+                <div style="font-weight:700">Noel‑Shop (Ví dụ)</div>
+                <div class="meta">React, Node.js — Trang thương mại điện tử demo</div>
+              </div>
+              <a href="#" class="btn">Xem</a>
+            </div>
+
+            <div class="project">
+              <div>
+                <div style="font-weight:700">Portfolio cá nhân</div>
+                <div class="meta">HTML, CSS, JavaScript — Trang cá nhân và blog</div>
+              </div>
+              <a href="#" class="btn">Xem</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <aside>
+        <div class="card">
+          <h3>Thông tin</h3>
+          <p class="meta">Hà Nội, Việt Nam · sẵn sàng nhận dự án freelance</p>
+          <div style="margin-top:12px">
+            <strong>Email</strong>
+            <div class="meta">hello@buiuyen.dev</div>
+          </div>
+          <div style="margin-top:12px">
+            <strong>Số điện thoại</strong>
+            <div class="meta">+84 9xx xxx xxx</div>
+          </div>
+          <div style="margin-top:14px;display:flex;gap:8px">
+            <a class="btn" href="#contact">Nhắn tin</a>
+            <a class="btn" href="#" style="background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)">Resume</a>
+          </div>
+        </div>
+
+        <div id="contact" class="card" style="margin-top:16px">
+          <h3>Liên hệ</h3>
+          <form class="contact" action="mailto:hello@buiuyen.dev" method="post" enctype="text/plain">
+            <input name="name" placeholder="Tên" style="padding:10px;border-radius:8px;border:none;background:rgba(255,255,255,0.02);color:inherit" />
+            <input name="email" placeholder="Email" style="padding:10px;border-radius:8px;border:none;background:rgba(255,255,255,0.02);color:inherit" />
+            <textarea name="message" rows="4" placeholder="Nội dung" style="padding:10px;border-radius:8px;border:none;background:rgba(255,255,255,0.02);color:inherit"></textarea>
+            <button type="submit" class="btn">Gửi</button>
+          </form>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      © <strong>Bùi Uyên</strong> — Web Developer · Thiết kế và xây dựng bởi Uyên.
+    </footer>
+  </div>
+
+  <script>
+    // Small enhancement: smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const href = a.getAttribute('href');
+        if(href.length>1){
+          e.preventDefault();
+          document.querySelector(href).scrollIntoView({behavior:'smooth'});
+        }
+      });
+    });
+  </script>
+</body>
+</html>
