@@ -8,11 +8,11 @@
 
   <style>
     :root{
-      --bg:#0b1220;
-      --card:#0f172a;
+      --bg:#0f1724;
+      --card:#0b1220;
       --muted:#9aa4b2;
       --accent:#60a5fa;
-      --accent2:#34d399;
+      --accent2:#6ee7b7;
     }
 
     *{box-sizing:border-box}
@@ -20,10 +20,7 @@
     body{
       margin:0;
       font-family:Inter,system-ui,Segoe UI,Arial;
-      background:
-        radial-gradient(800px 400px at 10% -10%, rgba(96,165,250,.15), transparent),
-        radial-gradient(800px 400px at 90% 10%, rgba(52,211,153,.12), transparent),
-        linear-gradient(180deg,#050b18 0%,#081021 60%);
+      background:linear-gradient(180deg,#071226 0%,#081021 60%);
       color:#e6eef8;
     }
 
@@ -37,10 +34,11 @@
     header{
       display:flex;
       align-items:center;
-      gap:36px;
+      gap:32px;
       flex-wrap:wrap;
     }
 
+    /* Avatar */
     .avatar-wrap{
       position:relative;
       width:180px;
@@ -50,11 +48,10 @@
 
     .avatar-bg{
       position:absolute;
-      inset:-8px;
+      inset:0;
       border-radius:50%;
       background:linear-gradient(135deg,var(--accent),var(--accent2));
-      filter:blur(18px);
-      opacity:.85;
+      transform:scale(1.08);
       z-index:0;
     }
 
@@ -66,7 +63,7 @@
       overflow:hidden;
       background:#fff;
       z-index:1;
-      box-shadow:0 25px 60px rgba(0,0,0,.45);
+      box-shadow:0 20px 50px rgba(0,0,0,.35);
     }
 
     .avatar img{
@@ -79,174 +76,3 @@
       margin:0;
       font-size:2.2rem;
     }
-
-    .lead{
-      color:var(--muted);
-      margin:8px 0 14px;
-      max-width:520px;
-      line-height:1.6;
-    }
-
-    .btn{
-      display:inline-block;
-      padding:10px 18px;
-      border-radius:12px;
-      background:var(--accent);
-      color:#041421;
-      font-weight:600;
-      text-decoration:none;
-      margin-right:8px;
-      transition:.2s;
-    }
-
-    .btn:hover{opacity:.9}
-
-    .btn.alt{
-      background:transparent;
-      border:1px solid rgba(255,255,255,.18);
-      color:#e6eef8;
-    }
-
-    /* ===== GRID ===== */
-    .grid{
-      display:grid;
-      grid-template-columns:1fr 340px;
-      gap:26px;
-      margin-top:44px;
-    }
-
-    .card{
-      background:
-        linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
-      padding:22px;
-      border-radius:18px;
-      box-shadow:0 14px 40px rgba(2,6,23,.6);
-      backdrop-filter:blur(6px);
-    }
-
-    .skills{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top:14px;
-    }
-
-    .chip{
-      padding:6px 14px;
-      border-radius:999px;
-      background:rgba(255,255,255,.08);
-      color:#cbd5e1;
-      font-size:.9rem;
-    }
-
-    .project{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:14px;
-      border-radius:14px;
-      background:rgba(255,255,255,.05);
-      margin-top:14px;
-    }
-
-    footer{
-      text-align:center;
-      margin-top:50px;
-      color:var(--muted);
-      font-size:.9rem;
-    }
-
-    /* ===== MOBILE ===== */
-    @media(max-width:900px){
-      header{
-        justify-content:center;
-        text-align:center;
-      }
-
-      .grid{
-        grid-template-columns:1fr;
-      }
-
-      .avatar-wrap{
-        width:150px;
-        height:150px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-<div class="container">
-
-  <header>
-    <div class="avatar-wrap">
-      <div class="avatar-bg"></div>
-      <div class="avatar">
-        <img src="assets/img/avatar.jpg" alt="Bùi Uyên">
-      </div>
-    </div>
-
-    <div>
-      <h1>Xin chào, mình là <span style="color:var(--accent)">Bùi Uyên</span></h1>
-      <p class="lead">
-        Sinh viên CNTT · Frontend & Full-stack developer  
-        <br>Tạo trải nghiệm web hiện đại, mượt mà và thân thiện.
-      </p>
-
-      <a href="#contact" class="btn">Liên hệ</a>
-      <a href="#projects" class="btn alt">Dự án</a>
-    </div>
-  </header>
-
-  <div class="grid">
-    <main>
-      <div class="card">
-        <h2>Về tôi</h2>
-        <p class="lead">
-          Tôi xây dựng các website hiện đại bằng HTML, CSS, JavaScript và React.
-          Quan tâm đến UI/UX, hiệu năng và khả năng mở rộng.
-        </p>
-
-        <div class="skills">
-          <span class="chip">HTML</span>
-          <span class="chip">CSS</span>
-          <span class="chip">JavaScript</span>
-          <span class="chip">React</span>
-          <span class="chip">Node.js</span>
-        </div>
-      </div>
-
-      <div id="projects" class="card" style="margin-top:22px">
-        <h2>Dự án</h2>
-
-        <div class="project">
-          <div>
-            <strong>Portfolio cá nhân</strong>
-            <div class="lead">Website giới thiệu bản thân</div>
-          </div>
-          <a class="btn" href="#">Xem</a>
-        </div>
-      </div>
-    </main>
-
-    <aside>
-      <div class="card">
-        <h3>Thông tin</h3>
-        <p class="lead">📍 Hà Nội, Việt Nam</p>
-        <p class="lead">✉️ hello@buiuyen.dev</p>
-      </div>
-
-      <div id="contact" class="card" style="margin-top:22px">
-        <h3>Liên hệ</h3>
-        <a class="btn" href="mailto:hello@buiuyen.dev">Gửi email</a>
-      </div>
-    </aside>
-  </div>
-
-  <footer>
-    © 2025 Bùi Uyên · Portfolio cá nhân
-  </footer>
-
-</div>
-</body>
-</html>
