@@ -76,3 +76,169 @@
       margin:0;
       font-size:2.2rem;
     }
+
+    .lead{
+      color:var(--muted);
+      margin:8px 0 14px;
+      max-width:520px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:10px 16px;
+      border-radius:10px;
+      background:var(--accent);
+      color:#042025;
+      font-weight:600;
+      text-decoration:none;
+      margin-right:8px;
+    }
+
+    .btn.alt{
+      background:transparent;
+      border:1px solid rgba(255,255,255,.15);
+      color:#e6eef8;
+    }
+
+    /* ===== GRID ===== */
+    .grid{
+      display:grid;
+      grid-template-columns:1fr 340px;
+      gap:26px;
+      margin-top:40px;
+    }
+
+    .card{
+      background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01));
+      padding:20px;
+      border-radius:14px;
+      box-shadow:0 10px 30px rgba(2,6,23,.6);
+    }
+
+    .skills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:10px;
+    }
+
+    .chip{
+      padding:6px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.05);
+      color:var(--muted);
+      font-size:.9rem;
+    }
+
+    .project{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:12px;
+      border-radius:12px;
+      background:rgba(255,255,255,.04);
+      margin-top:10px;
+    }
+
+    footer{
+      text-align:center;
+      margin-top:40px;
+      color:var(--muted);
+      font-size:.9rem;
+    }
+
+    /* ===== MOBILE ===== */
+    @media(max-width:900px){
+      header{
+        justify-content:center;
+        text-align:center;
+      }
+
+      .grid{
+        grid-template-columns:1fr;
+      }
+
+      .avatar-wrap{
+        width:150px;
+        height:150px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<div class="container">
+
+  <header>
+    <div class="avatar-wrap">
+      <div class="avatar-bg"></div>
+      <div class="avatar">
+        <!-- ✅ ẢNH AVATAR -->
+        <img src="uyenn.png" alt="Bùi Uyên">
+      </div>
+    </div>
+
+    <div>
+      <h1>Xin chào, mình là <span style="color:var(--accent)">Bùi Uyên</span></h1>
+      <p class="lead">
+        Sinh viên CNTT · Frontend & Full-stack developer  
+        <br>Tạo trải nghiệm web hiện đại, mượt mà và thân thiện.
+      </p>
+
+      <a href="#contact" class="btn">Liên hệ</a>
+      <a href="#projects" class="btn alt">Dự án</a>
+    </div>
+  </header>
+
+  <div class="grid">
+    <main>
+      <div class="card">
+        <h2>Về tôi</h2>
+        <p class="lead">
+          Tôi xây dựng các website hiện đại bằng HTML, CSS, JavaScript và React.
+          Quan tâm đến UI/UX, hiệu năng và khả năng mở rộng.
+        </p>
+
+        <div class="skills">
+          <span class="chip">HTML</span>
+          <span class="chip">CSS</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">React</span>
+          <span class="chip">Node.js</span>
+        </div>
+      </div>
+
+      <div id="projects" class="card" style="margin-top:20px">
+        <h2>Dự án</h2>
+
+        <div class="project">
+          <div>
+            <strong>Portfolio cá nhân</strong>
+            <div class="lead">Website giới thiệu bản thân</div>
+          </div>
+          <a class="btn" href="#">Xem</a>
+        </div>
+      </div>
+    </main>
+
+    <aside>
+      <div class="card">
+        <h3>Thông tin</h3>
+        <p class="lead">📍 Hà Nội, Việt Nam</p>
+        <p class="lead">✉️ hello@buiuyen.dev</p>
+      </div>
+
+      <div id="contact" class="card" style="margin-top:20px">
+        <h3>Liên hệ</h3>
+        <a class="btn" href="mailto:hello@buiuyen.dev">Gửi email</a>
+      </div>
+    </aside>
+  </div>
+
+  <footer>
+    © 2025 Bùi Uyên · Portfolio cá nhân
+  </footer>
+
+</div>
+</body>
+</html>
